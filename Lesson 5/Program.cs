@@ -2,7 +2,28 @@
 {
     internal class Program
     {
-
+        enum SortAlgorithmType
+        {
+            Selection,
+            Bubble,
+            Insertion
+        }
+        static void Sort(int[] arr, SortAlgorithmType type)
+        {
+            switch (type)
+            {
+                case SortAlgorithmType.Selection:
+                    selectionSort(arr);
+                    break;
+                case SortAlgorithmType.Bubble:
+                    bubbleSort(arr);
+                    break; 
+                case SortAlgorithmType.Insertion: 
+                    insertionSort(arr);
+                    break;
+                    
+            }
+        }
         static void selectionSort(int[] arr)
         {
             int n = arr.Length;
@@ -68,7 +89,10 @@
             int[] arr = { 45, 32, 76, 29, 3 };
             //selectionSort(arr);
             //bubbleSort(arr);
-            insertionSort(arr);
+            //insertionSort(arr);
+            Sort(arr, SortAlgorithmType.Selection);
+            //Sort(arr, SortAlgorithmType.Bubble);
+            //Sort(arr, SortAlgorithmType.Insertion);
             Console.WriteLine("Вiдсортований масив");
             printArray(arr);
         }
