@@ -21,5 +21,30 @@
             }
             return true;
         }
+
+        static void Analyze(string input, 
+                           out int numAlphabetic, 
+                           out int numDigits, 
+                           out int numSpecials)
+        {
+            numAlphabetic = 0;
+            numDigits = 0;
+            numSpecials = 0;
+            foreach (char c in input)
+            {
+                if (char.IsLetter(c))
+                {
+                    numAlphabetic++;
+                }
+                else if (char.IsDigit(c))
+                {
+                    numDigits++;
+                }
+                else
+                {
+                    numSpecials++;
+                }
+            }
+        }
     }
 }
