@@ -53,5 +53,23 @@
             str = new string(chars);
             return str;
         }
+
+        public static List<char>DuplicateList(string str)
+        {
+            List<char> duplicate = new List<char>();
+            List<char> seen = new List<char>();
+            foreach (char c in str)
+            {
+                if (seen.Contains(c) && !duplicate.Contains(c))
+                {
+                    duplicate.Add(c);
+                }
+                else 
+                {
+                    seen.Add(c); 
+                }
+            }
+            return duplicate;
+        }
     }
 }
