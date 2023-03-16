@@ -46,5 +46,12 @@
                 }
             }
         }
+        public static string Sort(string str)
+        {
+            char[] chars = str.ToCharArray();
+            Array.Sort(chars, StringComparer.OrdinalIgnoreCase,);
+            str = new string(chars);
+            return str;
+        }
     }
 }
