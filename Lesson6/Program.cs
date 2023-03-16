@@ -2,9 +2,14 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            string str1 = "Hello";
+            string str2 = "World";
+            
+            
+            
+
         }
         static bool Compare(string str1, string str2)
         {
