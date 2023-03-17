@@ -6,9 +6,33 @@
         {
             string str1 = "Hello";
             string str2 = "World";
-            
-            
-            
+            Console.WriteLine(Compare(str1, str2));
+
+            string input = "Hello world!!!";
+
+            int numAlphabetic;
+            int numDigits;
+            int numSpecials;
+
+            Analyze(input, out numAlphabetic, out numDigits, out numSpecials);
+
+            Console.WriteLine(numAlphabetic);
+            Console.WriteLine(numDigits);
+            Console.WriteLine(numSpecials);
+
+            string str = "multifunctional";
+            Console.WriteLine(Sort(str));
+
+            var str5 = "Hello world";
+
+            List<char> chars = DuplicateList(str5);
+            foreach (char c in chars)
+            {
+                Console.Write(c + " ");
+            }
+
+
+
 
         }
         static bool Compare(string str1, string str2)
@@ -54,7 +78,7 @@
         public static string Sort(string str)
         {
             char[] chars = str.ToCharArray();
-            Array.Sort(chars, StringComparer.OrdinalIgnoreCase,);
+            Array.Sort(chars, StringComparer.OrdinalIgnoreCase);
             str = new string(chars);
             return str;
         }
