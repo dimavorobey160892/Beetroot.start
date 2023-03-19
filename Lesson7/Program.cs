@@ -33,15 +33,27 @@ namespace Lesson7
                     if (input == "SEARCH")
                     {
                         Console.WriteLine(@"What criteries do you need to search...
-                        0 = Fist name,
+                        0 = Fist name(default),
                         1 = Last name,
                         2 = Phone number");
-                        var choice = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("What do you need to search");
-                        var search = Console.ReadLine();
-                        var result = SearchBy(phonebook, search, (Contact)choice);
-                        WriteBook(result.ToArray());
-                        Console.ReadKey();
+                        int choice = 0;
+                        try
+                        {
+                            choice = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                            Console.WriteLine("Search by First Name by default");
+                        }
+                        finally
+                        {
+                            Console.WriteLine("What do you need to search");
+                            var search = Console.ReadLine();
+                            var result = SearchBy(phonebook, search, (Contact)choice);
+                            WriteBook(result.ToArray());
+                            Console.ReadKey();
+                        }
 
                     }
                     if (input == "ADD")
