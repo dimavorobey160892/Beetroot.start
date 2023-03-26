@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AutoServiceLib.Vehicle.Vehicle" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Vehicle\Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Vehicle.Bus" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Vehicle\Bus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Vehicle.Car" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Vehicle.Motocycle" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle\Motocycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Vehicle.Truck" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle\Truck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Vehicle.Van" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle\Van.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.GearBox.GearBox" Collapsed="true">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GearBox\GearBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.GearBox.Automatic" Collapsed="true">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GearBox\Automatic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.GearBox.Manual" Collapsed="true">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GearBox\Manual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.GearBox.Robot" Collapsed="true">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GearBox\Robot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.GearBox.Variator" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GearBox\Variator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Engine.Engine" Collapsed="true">
+    <Position X="8.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Engine\Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Engine.Disel" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Engine\Disel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Engine.Electric" Collapsed="true">
+    <Position X="8.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Engine\Electric.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.Engine.Gasoline" Collapsed="true">
+    <Position X="10.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Engine\Gasoline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoServiceLib.AutoService">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAACAAAAAgAAAAAAAAAAAAAAAACAAAAAAAAAAKAA=</HashCode>
+      <FileName>AutoService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
