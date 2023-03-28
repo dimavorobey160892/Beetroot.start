@@ -1,6 +1,6 @@
 ﻿namespace OnlineShopLib
 {
-    public class Class1
+    public class OnlineShop
     {
 
     }
