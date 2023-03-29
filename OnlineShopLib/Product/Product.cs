@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib
 {
-    internal class Product
+    public class Product
     {
+        public Product(int price)
+        {
+            Price = price;
+        }
+        public int Price { get; set; }
+        public virtual void About()
+        {
+            Console.WriteLine($"Product has {Price} price");
+        }
     }
 }

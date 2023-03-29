@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib.Notebook
 {
-    internal class Notebook
+    public class Notebook
     {
     }
 }

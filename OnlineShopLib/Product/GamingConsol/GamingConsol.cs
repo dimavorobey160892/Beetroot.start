@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib.GamingConsol
 {
-    internal class GamingConsol
+    public class GamingConsol
     {
     }
 }

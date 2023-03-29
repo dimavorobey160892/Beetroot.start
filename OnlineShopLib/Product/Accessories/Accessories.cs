@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib.Accessories
 {
-    internal class accessories
+    public class accessories
     {
     }
 }
