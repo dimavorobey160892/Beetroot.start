@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineShopLib
+namespace OnlineShopLib.GamingConsol
 {
-    internal class accessories
+    internal class GamingConsol
     {
     }
 }
