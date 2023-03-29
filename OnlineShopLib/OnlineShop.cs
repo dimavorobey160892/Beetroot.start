@@ -2,34 +2,34 @@
 {
     public class OnlineShop
     {
-        private List <Accessories.Accessoies> accessories;
-        private List <GamingConsol.GamingConsol> gamingConsols;
-        private List <Notebook.Notebook> notebooks;
-        private List <Smartphone.Smartphone> smartphones;
-        private List <Buyer> buyers;
-        private List <Receipt> receipts;
+        private List<Accessories.Accessoies> accessories;
+        private List<GamingConsol.GamingConsol> gamingConsols;
+        private List<Notebook.Notebook> notebooks;
+        private List<Smartphone.Smartphone> smartphones;
+        private List<Buyer> buyers;
+        private List<Receipt> receipts;
 
-        public List <Accessories.Accessoies> Accessoies 
-        { 
-            get => accessories; set => accessories = value; 
-        }
-        public List <GamingConsol.GamingConsol> GamingConsols 
+        public List<Accessories.Accessoies> Accessoies
         {
-            get => gamingConsols; set => gamingConsols = value; 
+            get => accessories; set => accessories = value;
         }
-        public List <Notebook.Notebook> Notebooks 
+        public List<GamingConsol.GamingConsol> GamingConsols
         {
-            get => notebooks; set => notebooks = value; 
+            get => gamingConsols; set => gamingConsols = value;
         }
-        public List <Smartphone.Smartphone> Smartphones 
+        public List<Notebook.Notebook> Notebooks
         {
-            get => smartphones; set => smartphones = value; 
+            get => notebooks; set => notebooks = value;
         }
-        public List <Buyer> Buyers
+        public List<Smartphone.Smartphone> Smartphones
+        {
+            get => smartphones; set => smartphones = value;
+        }
+        public List<Buyer> Buyers
         {
             get => buyers; set => buyers = value;
         }
-        public List <Receipt> Receipts
+        public List<Receipt> Receipts
         {
             get => receipts; set => receipts = value;
         }
