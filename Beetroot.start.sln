@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson12", "Lesson12\Lesson12.csproj", "{C6EB9F9C-72B4-463F-B7E7-0E3CAAA83DAC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD843421-E7EA-4C9E-86F7-BD491168A848} = {AD843421-E7EA-4C9E-86F7-BD491168A848}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopLib", "OnlineShopLib\OnlineShopLib.csproj", "{AD843421-E7EA-4C9E-86F7-BD491168A848}"
 EndProject

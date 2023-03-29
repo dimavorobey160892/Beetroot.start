@@ -2,26 +2,31 @@
 {
     public class OnlineShop
     {
-        private List<Accessories.Accessoies> accessories;
-        private List<GamingConsol.GamingConsol> gamingConsols;
-        private List<Notebook.Notebook> notebooks;
-        private List<Smartphone.Smartphone> smartphones;
+        private List<Product.Product> products;
+        private List<Product.Accessories.Accessoies> accessories;
+        private List<Product.GamingConsol.GamingConsol> gamingConsols;
+        private List<Product.Notebook.Notebook> notebooks;
+        private List<Product.Smartphone.Smartphone> smartphones;
         private List<Buyer> buyers;
         private List<Receipt> receipts;
 
-        public List<Accessories.Accessoies> Accessoies
+        public List <Product.Product> Products
+        {
+            get => products; set => products = value;
+        }
+        public List<Product.Accessories.Accessoies> Accessoies
         {
             get => accessories; set => accessories = value;
         }
-        public List<GamingConsol.GamingConsol> GamingConsols
+        public List<Product.GamingConsol.GamingConsol> GamingConsols
         {
             get => gamingConsols; set => gamingConsols = value;
         }
-        public List<Notebook.Notebook> Notebooks
+        public List<Product.Notebook.Notebook> Notebooks
         {
             get => notebooks; set => notebooks = value;
         }
-        public List<Smartphone.Smartphone> Smartphones
+        public List<Product.Smartphone.Smartphone> Smartphones
         {
             get => smartphones; set => smartphones = value;
         }
@@ -36,9 +41,14 @@
 
         public OnlineShop()
         {
-            vehicles = new List<Vehicle.Vehicle>();
-            engines = new List<Engine.Engine>();
-            gearboxes = new List<GearBox.GearBox>();
+            products = new List<Product.Product>();
+            accessories = new List<Product.Accessories.Accessoies>();
+            gamingConsols = new List<Product.GamingConsol.GamingConsol>();
+            notebooks = new List<Product.Notebook.Notebook>();
+            smartphones = new List<Product.Smartphone.Smartphone>();
+            buyers = new List<Buyer>();
+            receipts = new List<Receipt>();
+
         }
     }
 }
