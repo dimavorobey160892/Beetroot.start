@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib
 {
-    internal class Receipt
+    public class Receipt
     {
+        public int Id { get; set; }
+        public DateTime date { get; set; }
+        public IProduct product { get; set; }
+        public Buyer buyer { get; set; }
+
     }
 }

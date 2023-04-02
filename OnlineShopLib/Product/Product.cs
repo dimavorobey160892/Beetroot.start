@@ -6,16 +6,38 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib
 {
-    public class Product
+    abstract public class Product : IProduct
     {
-        public Product(int price)
-        {
-            Price = price;
-        }
+        private int count;
+        public int Id { get; set; }
+
+        public string Name { get; set; }
         public int Price { get; set; }
-        public virtual void About()
+        public int Count 
         {
-            Console.WriteLine($"Product has {Price} price");
+            get
+            {
+                return count;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    count = value;
+                }
+            }
         }
+        public void ChangeCount(int count)
+        {
+            Count = count;
+        }
+        public Product(int id, string name, int price, int count)
+        {
+            Id = id;
+            Name = name;
+            Price = price;
+            Count = count;
+        }
+        public abstract void About();
     }
 }

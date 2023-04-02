@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib
 {
-    internal class Buyer
+    public class Buyer
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        public string FullName => $"{FirstName} {LastName}";
+        public int Id { get; set; }
     }
 }
