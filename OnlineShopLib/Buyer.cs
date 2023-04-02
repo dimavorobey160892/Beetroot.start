@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib
 {
-    public class Buyer
+    public struct Buyer
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

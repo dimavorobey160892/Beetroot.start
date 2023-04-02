@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib
 {
-    public class Receipt
+    public struct Receipt
     {
         public int Id { get; set; }
         public DateTime date { get; set; }
