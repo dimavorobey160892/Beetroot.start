@@ -11,7 +11,7 @@ namespace OnlineShopLib
         public int Id { get; set; }
         public DateTime date { get; set; }
         public IProduct product { get; set; }
-        public Buyer buyer { get; set; }
+        public Buyer? buyer { get; set; }
 
     }
 }

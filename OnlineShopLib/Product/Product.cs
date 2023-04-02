@@ -21,7 +21,7 @@ namespace OnlineShopLib
             }
             set
             {
-                if (value < 0)
+                if (value > 0)
                 {
                     count = value;
                 }
@@ -39,5 +39,11 @@ namespace OnlineShopLib
             Count = count;
         }
         public abstract void About();
+
+        public void Print()
+        {
+            Console.WriteLine($"id = {Id}, name = {Name}, price = {Price}, count = {Count}");
+            About();
+        }
     }
 }

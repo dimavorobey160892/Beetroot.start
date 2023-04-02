@@ -16,6 +16,8 @@ namespace Lesson12
                 Console.WriteLine("2 - update product count");
                 Console.WriteLine("3 - sell product");
                 Console.WriteLine("4 - register buyer");
+                Console.WriteLine("5 - print products");
+                Console.WriteLine("6 - print buyers");
                 Console.WriteLine("For close enter Exit");
                 command = Console.ReadLine();
                 switch (command)
@@ -30,8 +32,7 @@ namespace Lesson12
                         Int32.TryParse(Console.ReadLine(), out price);
 
                         Console.WriteLine("Enter count");
-                        int count = 0;
-                        Int32.TryParse(Console.ReadLine(), out count);
+                        int count = Convert.ToInt32(Console.ReadLine());
 
                         Console.WriteLine(" Which product do you want to add?");
                         Console.WriteLine("a - accessories");
@@ -39,7 +40,7 @@ namespace Lesson12
                         Console.WriteLine("c - laptop");
                         Console.WriteLine("d - smartphone");
                         string choice = Console.ReadLine();
-                        var MaxProdID = OnlineShop.Products.Max(p => p.Id);
+                        var MaxProdID = OnlineShop.Products.Count;
                         switch (choice)
                         {
                             case "a":
@@ -87,12 +88,13 @@ namespace Lesson12
                         int buyerId = Convert.ToInt32(Console.ReadLine());
                         OnlineShop.SellProduct(prodid, buyerId, prodcount);
                         break;
+
                     case "4":
                         Console.WriteLine("Enter First Name");
                         string firstName = Console.ReadLine();
                         Console.WriteLine("Enter Last Name");
                         string lastName = Console.ReadLine();
-                        int maxId = OnlineShop.Buyers.Max(x => x.Id);
+                        int maxId = OnlineShop.Buyers.Count;
                         Buyer buyer = new Buyer
                         {
                             Id = maxId + 1,
@@ -102,8 +104,24 @@ namespace Lesson12
                         OnlineShop.RegisterBuyer (buyer);
                     break;
 
+                    case "5":
+                        foreach (Product pr in OnlineShop.Products)
+                        {
+                            pr.Print();
+                        }
+                    break; 
+
+                    case "6":
+                        foreach (Buyer br in OnlineShop.Buyers)
+                        {
+                            Console.WriteLine($" Id = {br.Id}, {br.FullName}");
+                        }
+                        break;
                 }
+
+                Console.ReadKey();
                 Console.Clear();
+
             } while (command != "Exit");
 
         }

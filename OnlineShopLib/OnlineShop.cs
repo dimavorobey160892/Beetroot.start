@@ -45,14 +45,14 @@
         public void SellProduct(int productId, int buyerId, int count)
         {
             var product = products.FirstOrDefault(p => p.Id == productId);
-            if (product == null)
+            if (product != null)
             {
                 var receipt = new Receipt
                 {
-                    Id = receipts.Max(x => x.Id) + 1,
+                    Id = receipts.Count + 1,
                     date = DateTime.Now,
                     product = product,
-                    buyer = buyers.FirstOrDefault(p => p.Id == buyerId),
+                    buyer = buyers?.FirstOrDefault(p => p.Id == buyerId),
                 };
                 receipts.Add(receipt);
                 UpdateProductCount(productId, product.Count - count);
