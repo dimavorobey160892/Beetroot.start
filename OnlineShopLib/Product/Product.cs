@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopLib
 {
-    abstract public class Product : IProduct
+    public abstract class Product : IProduct
     {
         private int count;
         public int Id { get; set; }
