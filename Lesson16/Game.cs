@@ -63,6 +63,18 @@ namespace Lesson16
             Console.SetCursorPosition(0, 0);
         }
 
+        public void OnTick()
+        {
+            if (IsGameOver) throw new Exception();
+            CurrentDirection = NextDirection;
+            Snake.Move(CurrentDirection);
+            if (Snake.Head.Equals(_apple.Position))
+            {
+                Snake.Grow();
+                _apple = GameExtension.CreateApple();
+            }
+        }
+
 
     }
 }
