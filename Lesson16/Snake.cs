@@ -12,12 +12,14 @@ namespace Lesson16
         public Position Head => _wholeBody.First();
         public IEnumerable<Position> Body => _wholeBody.Skip(1);
         private int _growthRemaining;
+
         public static bool IsAlive => true;
         public Snake(Position location, int size = 1)
         {
             _wholeBody = new List<Position> {location};
             _growthRemaining = Math.Max(0, size-1);
         }
+
         public void Move(Direction direction)
         {
             if (IsAlive) throw new Exception("");

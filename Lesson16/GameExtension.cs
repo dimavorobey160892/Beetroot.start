@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lesson16
 {
-    public static class GameExtension
+    public static class GameExtensions
     {
         public static Apple CreateApple()
         {
@@ -22,20 +22,20 @@ namespace Lesson16
         public static void Render(this Apple apple)
         {
             Console.SetCursorPosition(apple.Position.Left, apple.Position.Top);
-            Console.Write("🍏")
+            Console.Write("🍏");
         }
 
-        public static Direction OppositeDirection(this Direction direction)
-        {
+        public static Direction OppositeDirection(this Direction direction) =>
+        
             direction switch
             {
                 Direction.Up => Direction.Down,
                 Direction.Down => Direction.Up,
                 Direction.Left => Direction.Right,
                 Direction.Right => Direction.Left,
-                _ => throw new Exeption()
+                _ => throw new Exception()
             };
-        }
+        
 
         public static void Render(this Snake snake, Game game)
             {

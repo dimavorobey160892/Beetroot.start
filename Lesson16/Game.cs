@@ -19,7 +19,7 @@ namespace Lesson16
         public Game()
         {
             Snake = new Snake(_startPosition, 3);
-            _apple = GameExtention.CreateApple();
+            _apple = GameExtensions.CreateApple();
             CurrentDirection = Direction.Right;
             NextDirection = Direction.Right;
         }
@@ -51,7 +51,7 @@ namespace Lesson16
                     break;
                 default: return;
             }
-            if (newDirection == Direction.OppositeDirection()) return;
+            if (newDirection == CurrentDirection.OppositeDirection()) return;
             NextDirection = newDirection;
         }
 
@@ -71,7 +71,7 @@ namespace Lesson16
             if (Snake.Head.Equals(_apple.Position))
             {
                 Snake.Grow();
-                _apple = GameExtension.CreateApple();
+                _apple = GameExtensions.CreateApple();
             }
         }
 

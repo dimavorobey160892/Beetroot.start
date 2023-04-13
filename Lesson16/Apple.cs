@@ -10,5 +10,7 @@ namespace Lesson16
     {
         public Position Position { get; }
         public Apple(Position position) => Position = position;
-   
+    }
 }
+   
+
