@@ -22,7 +22,7 @@ namespace Lesson16
 
         public void Move(Direction direction)
         {
-            if (IsAlive) throw new Exception("");
+            //if (IsAlive) throw new Exception("");
             var newHead = direction switch
             {
                 Direction.Up => Head.DownBy(-1),
