@@ -22,7 +22,9 @@ namespace Lesson16
         public static void Render(this Apple apple)
         {
             Console.SetCursorPosition(apple.Position.Left, apple.Position.Top);
-            Console.Write("🍏");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("☼");
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         public static Direction OppositeDirection(this Direction direction) =>
@@ -38,16 +40,19 @@ namespace Lesson16
         
 
         public static void Render(this Snake snake, Game game)
+        {
+            game.RotateSnakeIfBounds();
+            Console.SetCursorPosition(snake.Head.Left, snake.Head.Top);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write("☻");
+            Console.ForegroundColor = ConsoleColor.Red;
+            foreach (var elem in snake.Body)
             {
-                game.RotateSnakeIfBounds();
-                Console.SetCursorPosition(snake.Head.Left, snake.Head.Top);
-                Console.Write("😊");
-                foreach (var elem in snake.Body)
-                {
-                    Console.SetCursorPosition(elem.Left, elem.Top);
-                    Console.Write("🎲");
-                }
+                Console.SetCursorPosition(elem.Left, elem.Top);
+                Console.Write("◊");
             }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
 
         private static void RotateSnakeIfBounds(this Game game)
         {

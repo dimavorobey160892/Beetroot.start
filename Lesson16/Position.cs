@@ -12,8 +12,8 @@ namespace Lesson16
         public int Left { get; }
         public Position(int top, int left)
         {
-            Top = top;
-            Left = left;
+            Top = top <= -1 ? 0 : top;
+            Left = left <= -1 ? 0 : left;
         }
 
         public Position RightBy(int n) => new(Top, Left + n);

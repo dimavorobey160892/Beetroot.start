@@ -2,6 +2,7 @@
 using Lesson16;
 
 Console.OutputEncoding = Encoding.UTF8;
+Console.BackgroundColor = ConsoleColor.White;
 var game = new Game();
 
 using (var token = new CancellationTokenSource())
