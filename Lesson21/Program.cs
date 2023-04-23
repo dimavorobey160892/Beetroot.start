@@ -1,4 +1,5 @@
 ﻿using CalendarLib;
+using System.Text.Json;
 
 namespace Lesson21
 {
@@ -16,6 +17,8 @@ namespace Lesson21
                 Console.WriteLine("Choose mode:");
                 Console.WriteLine("1 - readonly");
                 Console.WriteLine("2 - RW");
+                Console.WriteLine("3 - Load calendars");
+                Console.WriteLine("4 - Save calendars");
                 input = Console.ReadLine();
                 string choice = "";
                 if (input == "1" || input == "2")
@@ -64,7 +67,22 @@ namespace Lesson21
                         Console.ReadKey();
                     } while (choice != "0");
                 }
-                Console.ReadKey();
+                if (input == "3")
+                {
+                    string json = File.ReadAllText(@".\roomlist.txt");
+                    if (json.Length > 0)
+                    {
+                        var options = new JsonSerializerOptions { IncludeFields = true };
+                        RoomList =
+                        JsonSerializer.Deserialize<List<Calendar>>(json, options);
+                    }
+                }
+                if (input == "4")
+                {
+                    var options = new JsonSerializerOptions { IncludeFields = true };
+                    var json = JsonSerializer.Serialize(RoomList, options);
+                    File.WriteAllText(@".\roomlist.txt", json);
+                }
 
             } while (input != "0");
 

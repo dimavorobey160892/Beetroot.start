@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson21", "Lesson21\Lesson21.csproj", "{F6ED8872-8867-4917-9884-0033D742ED59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson22", "Lesson21\Lesson22.csproj", "{F6ED8872-8867-4917-9884-0033D742ED59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarLib", "CalendarLib\CalendarLib.csproj", "{7B8B5103-9202-43AF-9944-B514428DAE4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalendarLib", "CalendarLib\CalendarLib.csproj", "{7B8B5103-9202-43AF-9944-B514428DAE4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
