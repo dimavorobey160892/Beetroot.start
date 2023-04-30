@@ -1,6 +1,7 @@
 ﻿SELECT * 
 FROM Persons
 WHERE Gender = 'male'
+ORDER BY FirstName, LastName
 
 SELECT *
 FROM Persons
