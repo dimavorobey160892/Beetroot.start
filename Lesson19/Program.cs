@@ -2,7 +2,7 @@
 
 namespace Lesson19HomeTask;
 
-internal static class Program
+public static class Program
 {
     // todo the following tasks
     // 1. find out who is located farthest north/south/west/east using latitude/longitude data
@@ -10,7 +10,7 @@ internal static class Program
     // 3. find 2 persons whos ‘about’ have the most same words
     // 4. find persons with same friends (compare by friend’s name)
     
-    private static void Main()
+    public static void Main()
     {
         var persons = JsonConvert.DeserializeObject<IEnumerable<Person>>(File.ReadAllText("data.json")).ToList();
 
@@ -90,13 +90,13 @@ internal static class Program
 
     }
 
-    static double getDistance(double lat1, double lng1, double lat2, double lng2)
+    public static double getDistance(double lat1, double lng1, double lat2, double lng2)
     {
         return Math.Acos(Math.Sin(lat1)*Math.Sin(lat2)+Math.Cos(lat1)*Math.Cos(lat2)*
             Math.Cos(lng2-lng1))*6371;
     }
 
-    static int SameWordsCount(string personAbout1, string personAbout2)
+    public static int SameWordsCount(string personAbout1, string personAbout2)
     {
         var about1 = personAbout1.Replace("\r\n", "").Replace(",", "").
             Replace(".", "").Trim().ToLower().Split(" ").Distinct();
@@ -106,7 +106,7 @@ internal static class Program
         return intersect.Count();
     }
 
-    static bool IsSameFriends(Friend[] friend1, Friend[] friend2)
+    public static bool IsSameFriends(Friend[] friend1, Friend[] friend2)
     {
         if (friend1.Length != friend2.Length)
         {
