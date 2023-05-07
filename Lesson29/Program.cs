@@ -2,6 +2,8 @@
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Diagnostics.Metrics;
 using System;
+using Microsoft.EntityFrameworkCore;
+using Lesson29.Models;
 
 namespace Lesson29
 {
@@ -9,7 +11,9 @@ namespace Lesson29
     {
         static void Main(string[] args)
         {
-            Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt = False; Trust Server Certificate = False; Application Intent = ReadWrite; Multi Subnet Failover = False
+            using var context = new Context();
+            context.Products.Add(new Product(1, "Iphone", 1300, "apple"));
+            context.SaveChanges();
         }
     }
 }

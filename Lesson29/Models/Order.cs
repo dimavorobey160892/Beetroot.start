@@ -8,6 +8,7 @@ namespace Lesson29.Models
 {
     public record Order : MyEntity
     {
+        public Order() { }
         public Order(int id, int customerId, int employerId, string info)
         {
             Id = id;

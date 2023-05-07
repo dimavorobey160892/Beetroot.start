@@ -10,6 +10,11 @@ namespace Lesson29
 {
     public class Context: DbContext
     {
+        public Context() 
+        {
+            Database.EnsureCreated();
+        }
+
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -17,7 +22,7 @@ namespace Lesson29
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
+            base.OnModelCreating(builder);
             builder.Entity<Order>()
                 .HasOne(order => order.Customer)
                 .WithMany(customer => customer.Orders)
