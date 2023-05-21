@@ -1,0 +1,29 @@
+postman-echo.com/post?MerchantID=23431244&BranchID=34434323&BranchName=Vasyl&BranchEmail=csvvvvcv@gmail.com&BranchAddress=wvkmvmevmkebk
+
+{
+    "args": {
+        "MerchantID": "23431244",
+        "BranchID": "34434323",
+        "BranchName": "Vasyl",
+        "BranchEmail": "csvvvvcv@gmail.com",
+        "BranchAddress": "wvkmvmevmkebk"
+    },
+    "data": {},
+    "files": {},
+    "form": {},
+    "headers": {
+        "x-forwarded-proto": "http",
+        "x-forwarded-port": "80",
+        "host": "postman-echo.com",
+        "x-amzn-trace-id": "Root=1-646a2206-7ad36687205160283a8f6915",
+        "content-length": "0",
+        "content-type": "application/json",
+        "user-agent": "PostmanRuntime/7.32.2",
+        "accept": "*/*",
+        "postman-token": "9aeabea9-d323-4e24-b2df-d3deb9558f82",
+        "accept-encoding": "gzip, deflate, br",
+        "cookie": "sails.sid=s%3AM1dVR-l2f0xnfa6POCH04IArxc69lO0B.wxY%2FkY4D6ECRE%2BfIiVDF9NA%2F6zKVhJFjmCh%2Fmf5Zek0"
+    },
+    "json": null,
+    "url": "http://postman-echo.com/post?MerchantID=23431244&BranchID=34434323&BranchName=Vasyl&BranchEmail=csvvvvcv@gmail.com&BranchAddress=wvkmvmevmkebk"
+}

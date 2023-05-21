@@ -1,0 +1,29 @@
+//postman-echo.com/post?BranchID=34434323&UserID=968686676&UserName=Nikolas&UserEmail=nikkjjbnn@gmail.com&UserPhone=+38099999999
+
+{
+    "args": {
+        "BranchID": "34434323",
+        "UserID": "968686676",
+        "UserName": "Nikolas",
+        "UserEmail": "nikkjjbnn@gmail.com",
+        "UserPhone": " 38099999999"
+    },
+    "data": {},
+    "files": {},
+    "form": {},
+    "headers": {
+        "x-forwarded-proto": "http",
+        "x-forwarded-port": "80",
+        "host": "postman-echo.com",
+        "x-amzn-trace-id": "Root=1-646a227f-2cd4ec4e730a4830424fad4c",
+        "content-length": "0",
+        "content-type": "application/json",
+        "user-agent": "PostmanRuntime/7.32.2",
+        "accept": "*/*",
+        "postman-token": "0d7b869a-ab5e-4c08-bbdb-2eb989d0e655",
+        "accept-encoding": "gzip, deflate, br",
+        "cookie": "sails.sid=s%3AIQH0h4MEYzx-08En6VnTBp1pbdbk9a7c.d0UPyxUXtIYU%2Boq3NHpJANFS8i95eKwnI1VbgBq6jdQ"
+    },
+    "json": null,
+    "url": "http://postman-echo.com/post?BranchID=34434323&UserID=968686676&UserName=Nikolas&UserEmail=nikkjjbnn@gmail.com&UserPhone=+38099999999"
+}

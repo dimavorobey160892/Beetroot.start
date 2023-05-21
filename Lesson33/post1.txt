@@ -1,0 +1,26 @@
+postman-echo.com/post?MerchantName=Dmytro&MerchantID=23431244&MerchantEmail=dodvkvwv@gmail.com
+
+{
+    "args": {
+        "MerchantName": "Dmytro",
+        "MerchantID": "23431244",
+        "MerchantEmail": "dodvkvwv@gmail.com"
+    },
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+        "x-forwarded-proto": "http",
+        "x-forwarded-port": "80",
+        "host": "postman-echo.com",
+        "x-amzn-trace-id": "Root=1-646a2192-214d6b9551facc09453bee54",
+        "content-length": "0",
+        "content-type": "application/x-www-form-urlencoded",
+        "user-agent": "PostmanRuntime/7.32.2",
+        "accept": "*/*",
+        "postman-token": "8d10a434-0dd1-491c-a0f8-ca85444abf29",
+        "accept-encoding": "gzip, deflate, br"
+    },
+    "json": null,
+    "url": "http://postman-echo.com/post?MerchantName=Dmytro&MerchantID=23431244&MerchantEmail=dodvkvwv@gmail.com"
+}
