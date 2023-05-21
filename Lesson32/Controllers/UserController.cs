@@ -1,6 +1,11 @@
 ﻿using Lesson32.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using ShopLib;
+using System.Security.Claims;
+using System;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Lesson32.Controllers
 {
@@ -10,7 +15,15 @@ namespace Lesson32.Controllers
         public UserController(ILogger<UserController> logger)
         {
             _logger = logger;
+            //ViewData["IsAuthorize"] = User?.Identity?.IsAuthenticated ?? false;
         }
+
+        public async Task<IActionResult> LogoutAsync()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Redirect("Login");
+        }
+
         [HttpGet]
         public IActionResult Login()
         {
@@ -19,22 +32,34 @@ namespace Lesson32.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(LoginModel model)
+        public async Task<IActionResult> LoginAsync(LoginModel model, string? returnUrl)
         {
             if (ModelState.IsValid)
             {
                 Context shopContext = new Context();
                 var isExists  = shopContext.Users
                     .Any(u => u.Email == model.Email && u.Password == model.Password);
-                ViewData["IsLoginCorrect"] = isExists;
-                ViewBag.Email = model.Email;
-                ViewBag.Password = model.Password;
+                //ViewData["IsLoginCorrect"] = isExists;
+                //ViewBag.Email = model.Email;
+                //ViewBag.Password = model.Password;
+                if (isExists)
+                {
+                    var claims = new List<Claim> { new Claim(ClaimTypes.Name, model.Email) };
+                    // создаем объект ClaimsIdentity
+                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Cookies");
+                    // установка аутентификационных куки
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                    return Redirect(returnUrl ?? "/");
+                }
+                else
+                {
+                    return Unauthorized();
+                }
             }
             else
             {
-                ViewData["IsLoginCorrect"] = false;
+                return BadRequest("Login or password is not correct.");
             }
-            return View();
         }
         public IActionResult Registration()
         {
@@ -62,7 +87,5 @@ namespace Lesson32.Controllers
             }                
             return View();
         }
-
-
     }
 }

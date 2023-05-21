@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using ShopLib;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Lesson32.Controllers
 {
@@ -12,6 +13,7 @@ namespace Lesson32.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            //ViewData["IsAuthorize"] = User?.Identity?.IsAuthenticated ?? false;
         }
 
         public IActionResult Index()
@@ -24,6 +26,7 @@ namespace Lesson32.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Order()
         {
@@ -33,6 +36,7 @@ namespace Lesson32.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Order(OrderModel model)
         {
@@ -49,6 +53,7 @@ namespace Lesson32.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Question()
         {
             Context shopContext = new Context();
@@ -57,6 +62,7 @@ namespace Lesson32.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Question(QuestionModel model)
         {
