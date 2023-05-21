@@ -18,10 +18,10 @@ namespace Lesson32.Controllers
             //ViewData["IsAuthorize"] = User?.Identity?.IsAuthenticated ?? false;
         }
 
-        public async Task<IActionResult> LogoutAsync()
+        public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Redirect("Login");
+            return RedirectToAction("Login");
         }
 
         [HttpGet]
@@ -32,7 +32,7 @@ namespace Lesson32.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> LoginAsync(LoginModel model, string? returnUrl)
+        public async Task<IActionResult> Login(LoginModel model, string? returnUrl)
         {
             if (ModelState.IsValid)
             {
