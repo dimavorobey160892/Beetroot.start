@@ -9,9 +9,8 @@ namespace ShopLib.Models
     public record Question : BaseEntity
     {
         public Question() { }
-        public Question(int id, int userId, string title, string text)
+        public Question(int userId, string title, string text)
         {
-            Id = id;
             UserId = userId;
             Title = title;
             Text = text;

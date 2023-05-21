@@ -24,13 +24,15 @@ namespace ShopLib.Models
         }
 
         public User(string firstName, string lastName, int age,
-            string gender, string? address)
+            string gender, string? address, string email, string password)
         {            
             FirstName = firstName;
             LastName = lastName;
             Age = age;
             Gender = gender;
             Address = address;
+            Email = email;
+            Password = password;
         }
     }
 }

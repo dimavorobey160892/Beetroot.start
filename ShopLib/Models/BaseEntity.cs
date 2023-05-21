@@ -10,7 +10,7 @@ namespace ShopLib.Models
 {
     public record BaseEntity
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
     }
 }

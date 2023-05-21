@@ -49,7 +49,12 @@ namespace Lesson32.Controllers
             {
                 Context shopContext = new Context();
 
-                shopContext.Users.Add(new ShopLib.Models.User()
+                shopContext.Users.Add(new ShopLib.Models.User(
+                    model.FirstName, model.LastName, model.Age,
+                    model.Gender, model.Address, model.Email, model.Password));
+                shopContext.SaveChanges();
+
+                ViewData["IsRegistrationCorrect"] = true;
             }
             else
             {

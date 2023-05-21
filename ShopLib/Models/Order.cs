@@ -9,9 +9,8 @@ namespace ShopLib.Models
     public record Order: BaseEntity
     {
         public Order() { }
-        public Order(int id, int userId, string info)
+        public Order(int userId, string info)
         {
-            Id = id;
             UserId = userId;
             Info = info;
         }
