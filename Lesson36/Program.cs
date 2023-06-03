@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Lesson35.Models;
-using Lesson35;
+using Lesson36.Models;
+using Lesson36;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 

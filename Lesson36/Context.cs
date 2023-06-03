@@ -1,9 +1,9 @@
-﻿using Lesson35.Models;
+﻿using Lesson36.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 
-namespace Lesson35
+namespace Lesson36
 {
     public class Context : DbContext
     {

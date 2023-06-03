@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Lesson35;
-using Lesson35.Models;
+using Lesson36;
+using Lesson36.Models;
 
-namespace Lesson35.Controllers
+namespace Lesson36.Controllers
 {
     [Route("api/users")]
     [ApiController]
