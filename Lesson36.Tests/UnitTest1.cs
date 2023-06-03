@@ -1,3 +1,4 @@
+using Castle.Core.Logging;
 using Lesson36.Controllers;
 using Lesson36.Models;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,7 @@ namespace Lesson36.Tests
         public UnitTest1() 
         {
             context = new Context( new DbContextOptions<Context>());
-            usersController = new UsersController(context);
+            usersController = new UsersController(context, null);
         }
         [Fact]
         public void GetUsers_ShouldReturnAllUSers()

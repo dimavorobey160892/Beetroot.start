@@ -15,19 +15,25 @@ namespace Lesson36.Controllers
     public class UsersController : ControllerBase
     {
         private readonly Context _context;
+        private readonly ILogger<UsersController> _logger;
 
-        public UsersController(Context context)
+        public UsersController(Context context, ILogger<UsersController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: api/Users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-          if (_context.Users == null)
+            _logger.LogInformation("Get users at {DT}",
+            DateTime.UtcNow.ToLongTimeString());
+            if (_context.Users == null)
           {
-              return NotFound();
+             _logger.LogInformation("User not found at {DT}",
+             DateTime.UtcNow.ToLongTimeString());
+                return NotFound();
           }
             return await _context.Users.ToListAsync();
         }
@@ -36,7 +42,9 @@ namespace Lesson36.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
-          if (_context.Users == null)
+            _logger.LogInformation($"Get user by Id = {id} at {{DT}}",
+            DateTime.UtcNow.ToLongTimeString());
+            if (_context.Users == null)
           {
               return NotFound();
           }
