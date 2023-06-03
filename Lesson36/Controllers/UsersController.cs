@@ -94,14 +94,23 @@ namespace Lesson36.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
-          if (_context.Users == null)
-          {
-              return Problem("Entity set 'Context.Users'  is null.");
-          }
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                if (_context.Users == null)
+                {
+                    return Problem("Entity set 'Context.Users'  is null.");
+                }
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+                return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            }
+            else
+            {
+                _logger.LogInformation($"PostUser with not valid model at {{DT}}",
+                DateTime.UtcNow.ToLongTimeString());
+                return Problem("User model is not valid");
+            }
         }
 
         // DELETE: api/Users/5
